@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+}
+
+.loader {
+  top: calc(100% - 128px);
+  left: calc(50% - 64px);
+}
+
+.error {
+  width: inherit;
+}
+
+input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50em;
+  background: url('https://fonts.gstatic.com/s/i/materialicons/cancel/v14/24px.svg')
+    no-repeat 50% 50%;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+}
+
+input[type='search']:focus::-webkit-search-cancel-button {
+  opacity: 0.3;
+  pointer-events: all;
+}
+
+input[type='search'].dark::-webkit-search-cancel-button {
+  filter: invert(1);
+}
