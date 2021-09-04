@@ -11,7 +11,15 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const DetailsContext = createContext<ContextType | null>(null);
+const defaultValue: ContextType = {
+  loading: false,
+  pokemonDetails: null,
+  showDetails: false,
+  getPokemonDetails: () => {},
+  clearPokemonDetails: () => {},
+};
+
+export const DetailsContext = createContext<ContextType>(defaultValue);
 
 function DetailsProvider({ children }: Props) {
   const [pokemonDetails, setPokemonDetails] = useState<PokemonDetails | null>(

@@ -8,7 +8,9 @@ function App() {
     <DetailsProvider>
       <SearchBar />
       <DetailsContext.Consumer>
-        {(value) => (value?.showDetails ? <PokemonDetails /> : <PokemonList />)}
+        {({ showDetails }) =>
+          showDetails ? <PokemonDetails /> : <PokemonList />
+        }
       </DetailsContext.Consumer>
     </DetailsProvider>
   );
