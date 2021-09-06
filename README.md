@@ -2,7 +2,7 @@
 
 1. Install Node v14.17.0 (LTS) using manual installation or [Node Version Manager](https://github.com/nvm-sh/nvm).
 2. Install Yarn v1.22.11 using `npm install -g yarn`.
-3. Install node_modules using `yarn install`.
+3. Install node packages using `yarn install`.
 4. For development, run using `yarn start`.
 5. For production, run using `yarn build` and serve using static server like [serve](https://www.npmjs.com/package/serve/v/11.3.0) and [http-server](https://www.npmjs.com/package/http-server).
 
